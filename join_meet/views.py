@@ -17,9 +17,15 @@ class JoinGoogleMeetAPIView(generics.GenericAPIView):
         if serializer.validated_data.get('error'):
             return Response({'error': serializer.validated_data['error']})
 
-        join_google_meet(serializer.validated_data['meet_url'])
+        try:
+            join_google_meet(serializer.validated_data['meet_url'])
 
-        return Response({'status': 'ok'})
+            return Response({'status': 'ok'})
+
+        except:
+            return Response({
+                'status': 'error occurred',
+            })
 
 
 class JoinZoomMeetAPIView(generics.GenericAPIView):
