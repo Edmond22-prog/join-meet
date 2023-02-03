@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-def join_meet(url):
+def join_google_meet(url):
 
     # Definition des options de Chrome
     options = Options()
