@@ -15,7 +15,7 @@ def join_google_meet(url):
 
     # Definition des options de Chrome
     options = Options()
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     # options.add_argument('--no-sandbox')
     # options.add_argument('--disable-gpu')
     # options.add_argument('--hide-scrollbars')
@@ -77,6 +77,6 @@ def join_google_meet(url):
     join_button = browser.find_element(By.XPATH, '//*[@id="yDmH0d"]/c-wiz/div/div/div[13]/div[3]/div/div[1]/div['
                                                  '4]/div/div/div[2]/div/div[2]/div[1]/div[1]/button')
     join_button.click()
-    browser.implicitly_wait(100)
+    # browser.implicitly_wait(100)
 
     logging.info("The end.")
